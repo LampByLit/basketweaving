@@ -1,0 +1,22 @@
+Because this is largely an experiment, we are going to be building and testing ideas while we figure out exactly how our larger, finished application should be. for now, we can start simple. 
+
+firstly, i want our application to do the following:
+
+- monitor the most recent post number of any given board (we will make the target board configurable)
+- anticipate the next GET by waiting for the post previous to the GET (example: 123456776, or 111111143)
+- create a post as soon as the Previous post is found, thereby ensuring that we capture the GET and our post results in trailing repeating digits.
+
+does this make sense?
+
+our strategy for this will be as follows:
+- check the newest thread in the catalog (excluding pinned threads)
+- check the newest post in that thread
+- monitor the post numbers in anticipation of the next GETs PREVIOUS post
+- immediately make a post as soon as the PREVIOUS post is detected.
+
+utlimately, in order to post on 4chan, our bot will need to be able to access the catalog screen of any given board and create a post. i do not know the difficulty of that level of scraping or web interaction, so we will need to discuss that. we may, in fact, not be able to deploy this on railway, due to 4chan's anti bot policies, however we can cross that bridge later.  
+i am in possession of a 4chan pass, which allows me to post to 4chan without the CAPTCHA from my devices, of which my local machine is included. 
+
+does this aid in the project context? 
+let's discuss before moving on
+
